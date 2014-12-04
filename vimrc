@@ -99,8 +99,14 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$|\.class$|\.min\..*\.js',
   \ }
 
+Plugin '907th/vim-auto-save'
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 
 " Assumes solarized is ready after vundle#end()
 if ( has('gui_running'))
